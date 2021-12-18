@@ -14,15 +14,19 @@ require_once 'academique.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV responsive</title>
-<link rel="stylesheet" type="text/css" href="cv.css" >
+<link rel="stylesheet" type="text/css" href="style/cv.css" >
+<link rel="stylesheet" type="text/css" href="style/bouton.css" >
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
+    , <div class="container">
         <div class="left_side" >
             <div class="partia">
                
-                <div class="photo">
+                <div class="photo"  style="background-image: url(img1.jpg);">
                     <DIV class="SEARCH">
                         <input type="search" size="20px" name="" value="rechercher un chef de projet" style="width: 100%; height: 20% ;margin-top:3%; background-image: 0;">
                     </DIV>
@@ -34,8 +38,27 @@ require_once 'academique.php';
                 <h3><?php echo $presentation["username"] ;?><br><span><?php echo $presentation["profession"] ;?></span></h3>
             </div>
         </div>
+
+     
         <button class="btn_plus">
-            <img src="plus.png" style="height: 25px; width: 25px; margin-top: 5px" alt="" srcset="" />
+           
+<div class='button-parent' >
+  <input type="checkbox" id='btn'>
+  <label for="btn" class='button'>
+        <i class="material-icons">+</i>
+      </label>
+
+  <div class="link-parent">
+    <a href='#' class='link-item' id='link-one'>
+<div class="label-container">
+<div class="label-text">Enregistre</div>
+      <i class="material-icons">+</i>
+</div>
+    </a>
+    <a href='#' class='link-item' id='link-two'>
+      <i class="material-icons">+</i>
+    </a>
+  </div>
         </button>
 
             <div class="contactinfo">
@@ -86,9 +109,9 @@ require_once 'academique.php';
             <label for="" style="margin-left: 10px"><?php echo $presentation["projet"] ;?></label>
             <label for="" style="margin-left: 15px"><?php echo $presentation["contrat"] ;?></label>
             <label for="" style="margin-left: 20px"><?php echo $presentation["exp"] ;?></label>
-        </div>
+          </div>
               <div style="background: red; width: 120px; height: 2px; "></div>
-        </div>
+         </div>
         
            
             <div class="contactinfo langue">
@@ -349,6 +372,6 @@ require_once 'academique.php';
 
            
             </div>
-    </div>
-</body>
+        </div>
+    </body>
 </html>
