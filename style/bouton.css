@@ -1,0 +1,105 @@
+
+
+  i {
+    color: #fff;
+    font-size: 20px !important;
+    /* 24px preferred icon size */
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  #btn {
+    display: flex;
+  }
+  
+  .button-parent {
+    display: flex;
+  }
+  
+  .button {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: -20px;
+    
+    cursor:pointer;
+    
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    background-color: #e34856;
+    margin-top: -4px;
+    
+  }
+  
+  
+  /* link and link-parent */
+  
+  .link-parent {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+  }
+  
+  .link-item {
+  margin: -150px;
+    background-color: black;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+    transform: translatey(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: move-up;
+    animation-duration: .3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  
+  
+  /* control click */
+  
+  #btn:checked~.link-parent {
+  display: flex;
+  flex-direction: column;
+
+  }
+  
+  
+  /* animation */
+  
+  @keyframes move-up {
+    0% {
+      transform: translateY(5px);
+    }
+    33% {
+      transform: translateY(0px);
+    }
+    66% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  #link-one {
+    animation-delay: .1s;
+    margin-left:-320px;
+    margin-top: -100px;
+  }
+  
+  #link-two {
+    animation-delay: .2s;
+    margin-left:-380px;
+    margin-top: 50px;
+  }
